@@ -1,0 +1,18 @@
+1.Mostrar el nombre y duración de las canciones del disco "Outbreak"
+
+sql:SELECT name,Milliseconds FROM tracks WHERE AlbumId =(SELECT AlbumId FROM albums
+WHERE Title like  "%Outbreak%");
+
+2.Mostrar los títulos de los discos de "Deep Purple"
+
+sql:SELECT name FROM tracks WHERE AlbumId =(SELECT AlbumId FROM albums
+WHERE Title like  "%Deep Purple%");
+--AND Title like "%Knocking at Your Back Door: The Best Of Deep Purple in the 80's%"
+--me llama 8 y me talta los 11 discos 
+
+3.Mostrar el nombre y duración de las canciones de los discos de "Deep Purple"
+
+sql:SELECT name,Milliseconds FROM tracks WHERE AlbumId =(SELECT AlbumId FROM albums
+WHERE Title like  "%Deep Purple%");
+
+
